@@ -173,7 +173,6 @@ const BilanganBulatPage = () => {
 
   // ── telaah soal wrapper (display num separate from internal qn offset) ─
   const TelaahSoal = ({ num, tipe, children }: { num: number; tipe: "PGS" | "MCMA" | "BS"; children: React.ReactNode }) => {
-    if ([1, 4, 5].includes(num)) return null;
     const tipeColor =
       tipe === "PGS"  ? (isDark ? "bg-sky-500/20 text-sky-300 border-sky-500/40"       : "bg-sky-100 text-sky-700 border-sky-300") :
       tipe === "MCMA" ? (isDark ? "bg-amber-500/20 text-amber-300 border-amber-500/40"  : "bg-amber-100 text-amber-700 border-amber-300") :
@@ -186,7 +185,7 @@ const BilanganBulatPage = () => {
       tipe === "PGS"  ? "Pilihan Ganda" :
       tipe === "MCMA" ? "Multiple Choice – lebih dari 1 jawaban" :
                         "Pernyataan Benar / Salah";
-    const telaahOrder: Record<number, number> = { 3: 1, 10: 2, 2: 3, 6: 4, 7: 5, 8: 6, 9: 7, 11: 8, 12: 9 };
+    const telaahOrder: Record<number, number> = { 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12 };
     return (
       <div style={{ order: telaahOrder[num] ?? 99 }} className={`rounded-xl p-5 ${
         isDark ? "bg-card/70 backdrop-blur border border-border" : "bg-white border border-gray-200 shadow-sm"
@@ -203,8 +202,7 @@ const BilanganBulatPage = () => {
 
   // ── question wrapper ─────────────────────────────────────────────────
   const Soal = ({ n, tipe, children }: { n: number; tipe: "PGS" | "MCMA" | "BS"; children: React.ReactNode }) => {
-    if ([3, 6, 9, 11, 13, 14, 15, 16, 17, 19, 23, 24, 34, 35].includes(n)) return null;
-    const displayNumber = n > 4 ? n - 1 : n;
+    const displayNumber = n;
     const tipeColor =
       tipe === "PGS"  ? (isDark ? "bg-sky-500/20 text-sky-300 border-sky-500/40"       : "bg-sky-100 text-sky-700 border-sky-300") :
       tipe === "MCMA" ? (isDark ? "bg-amber-500/20 text-amber-300 border-amber-500/40"  : "bg-amber-100 text-amber-700 border-amber-300") :
