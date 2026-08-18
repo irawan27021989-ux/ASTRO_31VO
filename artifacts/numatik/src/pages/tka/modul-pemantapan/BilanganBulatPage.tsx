@@ -1008,12 +1008,72 @@ const BilanganBulatPage = () => {
               </div>
             </TelaahSoal>
 
-            <TelaahSoal num={8} tipe="BS">
+            <TelaahSoal num={8} tipe="MCMA">
+              <p className={qText}>
+                <span className="font-bold">Studi Kasus Alur Pelayanan Samsat</span><br />
+                Pada layanan Samsat, Eko mulai melakukan proses cek fisik tepat pukul 10.00 dan selesai pada menit ke-15 (pukul 10.15). Rina dan Gilang tiba di tempat dan mengantre di urutan berikutnya secara berurutan seperti pada ilustrasi berikut.
+              </p>
+              <div className="mb-4 overflow-hidden rounded-xl border border-sky-200 bg-sky-50 p-2">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_t240pht240pht240-DwcFf5qLDEj1ZQW8MzoyWTocVrVsaP.jpg"
+                  alt="Ilustrasi alur pelayanan Samsat dari cek fisik, pembayaran, pencetakan STNK, hingga pengambilan plat nomor"
+                  className="h-auto w-full rounded-lg"
+                />
+              </div>
+              <p className={qText}>Berdasarkan ilustrasi alur pelayanan dan ketentuan durasi di atas, tentukan pernyataan yang <span className="font-bold">PASTI BENAR</span>! Pilih lebih dari satu jawaban.</p>
+              <MCMA qn={58} items={[
+                { text: "Eko menyelesaikan seluruh rangkaian proses layanan hingga mengambil plat nomor pada pukul 10.35.", benar: true },
+                { text: "Rina baru dapat memulai pemrosesan Tahap 2 (Pembayaran) pada pukul 10.25, tepat ketika Eko selesai melakukan pembayaran.", benar: true },
+                { text: "Gilang dapat menyelesaikan pencetakan STNK sebelum Eko mengambil plat nomor.", benar: false },
+                { text: "Gilang baru bisa memulai cek fisik pada pukul 10.15.", benar: false },
+              ]} />
+              <div className="mt-3 space-y-2">
+                <PBJawaban>Pernyataan (1) dan (2) benar</PBJawaban>
+                <PBKonsep>
+                  <p>Setiap tahap layanan dikerjakan berurutan. Cek fisik berlangsung 15 menit, pembayaran 10 menit, pencetakan STNK 5 menit, dan pengambilan plat nomor berlangsung setelahnya.</p>
+                  <p>Karena Rina dan Gilang mengantre berurutan, waktu mulai mereka ditentukan oleh antrean pada Tahap 1.</p>
+                </PBKonsep>
+                <PBSteps>
+                  <S n={1}><p>Eko: cek fisik 10.00–10.15, pembayaran 10.15–10.25, pencetakan STNK 10.25–10.30, lalu mengambil plat nomor pukul 10.35. Pernyataan (1) <span className="font-bold">BENAR</span>.</p></S>
+                  <S n={2}><p>Rina mulai cek fisik pukul 10.15 dan selesai 10.25. Jadi, ia mulai pembayaran pukul 10.25. Pernyataan (2) <span className="font-bold">BENAR</span>.</p></S>
+                  <S n={3}><p>Gilang baru mulai cek fisik setelah Rina, yaitu pukul 10.30. Ia tidak mungkin mencetak STNK sebelum Eko mengambil plat pada 10.35. Pernyataan (3) <span className="font-bold">SALAH</span>.</p></S>
+                  <S n={4}><p>Gilang tidak dapat mulai cek fisik pukul 10.15 karena Rina berada di urutan antrean sebelumnya. Pernyataan (4) <span className="font-bold">SALAH</span>.</p></S>
+                </PBSteps>
+              </div>
+            </TelaahSoal>
+            <TelaahSoal num={9} tipe="BS">
               <p className={qText}>Siti memasukkan air hangat bersuhu <InlineMath math="30°C" /> ke kulkas pukul 14.00. Tentukan Benar atau Salah!</p>
-              <TFTable qn={58} rows={[
+              <TFTable qn={59} rows={[
                 { key: "a", text: <span>Suhu turun <InlineMath math="3°C" /> tiap 2 jam, sehingga pukul 18.00 menjadi <InlineMath math="24°C" />.</span>, correct: "Benar" },
                 { key: "b", text: <span>Dalam 5 jam suhu berkurang <InlineMath math="8°C" />, sehingga pukul 19.00 menjadi <InlineMath math="22°C" />.</span>, correct: "Benar" },
                 { key: "c", text: <span>Suhu turun <InlineMath math="2°C" /> tiap jam sampai pukul 20.00, sehingga suhunya <InlineMath math="16°C" />.</span>, correct: "Benar" },
+              ]} />
+            </TelaahSoal>
+            <TelaahSoal num={10} tipe="MCMA">
+              <p className={qText}>Diberikan <InlineMath math="14^2-4^2" />, <InlineMath math="10^2+44" />, dan <InlineMath math="12\times9" />. Faktor persekutuan ketiganya adalah ....</p>
+              <MCMA qn={60} items={[
+                { text: <InlineMath math="2\times3" />, benar: true }, { text: <InlineMath math="2^2\times3" />, benar: true },
+                { text: <InlineMath math="3" />, benar: true }, { text: <InlineMath math="2^3" />, benar: false },
+              ]} />
+            </TelaahSoal>
+            <TelaahSoal num={11} tipe="PGS">
+              <p className={qText}>Andi membeli bola basket Rp150.000, 2 celana training Rp90.000 per buah, dan 2 kaos Rp75.000 per buah. Setiap pembelian 5 barang gratis 1 barang termurah. Total setelah promo adalah ....</p>
+              <MCQ qn={61} correct={1} options={["A. Rp405.000", "B. Rp425.000", "C. Rp480.000", "D. Rp505.000"]} />
+            </TelaahSoal>
+            <TelaahSoal num={12} tipe="MCMA">
+              <p className={qText}>Pada layanan Samsat, Eko sudah selesai cek fisik pada menit ke-5. Rina dan Gilang mengantre setelahnya. Pernyataan yang pasti benar adalah ....</p>
+              <MCMA qn={62} items={[
+                { text: "Eko selesai pembayaran sebelum Rina memulai cek fisik.", benar: true },
+                { text: "Rina memulai pembayaran sebelum Gilang memulai pendaftaran.", benar: true },
+                { text: "Gilang mencetak STNK setelah Eko mengambil plat.", benar: true },
+                { text: "Total waktu kurang dari 60 menit.", benar: false },
+              ]} />
+            </TelaahSoal>
+            <TelaahSoal num={13} tipe="MCMA">
+              <p className={qText}>Harga Pertamax Rp13.850 per liter. Pak Anton membeli <InlineMath math="18{,}2" /> liter. Estimasi yang tepat adalah ....</p>
+              <MCMA qn={63} items={[
+                { text: "Total biaya kurang dari Rp270.000,00", benar: true }, { text: "Total biaya lebih dari Rp230.000,00", benar: true },
+                { text: <span>Estimasi dapat dihitung dengan <InlineMath math="18\times Rp14.000" /></span>, benar: true }, { text: "Nilainya mendekati Rp300.000,00", benar: false },
               ]} />
             </TelaahSoal>
             <TelaahSoal num={9} tipe="MCMA">
@@ -1141,7 +1201,33 @@ const BilanganBulatPage = () => {
             )}
           </Soal>
 
-          {/* ══ SOAL 4 — PGS ══ */}
+          {/* ══ SOAL 4 — BS (dipindahkan dari nomor 6) ══ */}
+          <Soal n={4} tipe="BS">
+            <p className={qText}>
+              Tentukan <span className={`font-bold ${isDark?"text-green-300":"text-green-600"}`}>Benar</span> atau <span className={`font-bold ${isDark?"text-red-300":"text-red-600"}`}>Salah</span> setiap pernyataan tentang operasi hitung berikut!
+            </p>
+            <TFTable qn={4} rows={[
+              { key:"a", text: <span><InlineMath math="(-4) \times 3 + (-2) = -14" /></span>, correct: "Benar" },
+              { key:"b", text: <span><InlineMath math="20 \div (-4) - 5 = 0" /></span>, correct: "Salah" },
+              { key:"c", text: <span><InlineMath math="(-3)^2 = -9" /></span>, correct: "Salah" },
+            ]} />
+            <PembahasanBtn n={4} />
+            {expandedPembahasan.has(4) && (
+              <div className="mt-3 space-y-2">
+                <PBJawaban>(a) Benar &nbsp;|&nbsp; (b) Salah &nbsp;|&nbsp; (c) Salah</PBJawaban>
+                <PBKonsep>
+                  <p>Urutan Ka–Pa–Ka–Ta: kali/bagi dikerjakan sebelum tambah/kurang.</p>
+                  <p><InlineMath math="(-3)^2 = (-3)\times(-3) = +9" /> bukan −9 — pangkat genap selalu positif!</p>
+                  <p className={`text-[10px] italic ${isDark?"text-violet-300/70":"text-violet-500"}`}>💡 Trik: pangkat genap bilangan negatif = positif, pangkat ganjil = negatif.</p>
+                </PBKonsep>
+                <PBSteps>
+                  <S n={1}><p>(a) <InlineMath math="(-4)\times3=-12" />, lalu <InlineMath math="-12+(-2)=-14" /> → BENAR ✓</p></S>
+                  <S n={2}><p>(b) <InlineMath math="20\div(-4)=-5" />, lalu <InlineMath math="-5-5=-10\neq0" /> → SALAH ✗</p></S>
+                  <S n={3}><p>(c) <InlineMath math="(-3)^2=(-3)\times(-3)=+9\neq-9" /> → SALAH ✗</p></S>
+                </PBSteps>
+              </div>
+            )}
+          </Soal>
 
           {/* ══ SOAL 5 — MCMA ══ */}
           <Soal n={5} tipe="MCMA">
@@ -1175,30 +1261,29 @@ const BilanganBulatPage = () => {
             )}
           </Soal>
 
-          {/* ══ SOAL 6 — BS ══ */}
-          <Soal n={6} tipe="BS">
+          {/* ══ SOAL 6 — PGS (dipindahkan dari nomor 4) ══ */}
+          <Soal n={6} tipe="PGS">
             <p className={qText}>
-              Tentukan <span className={`font-bold ${isDark?"text-green-300":"text-green-600"}`}>Benar</span> atau{" "}
-              <span className={`font-bold ${isDark?"text-red-300":"text-red-600"}`}>Salah</span> setiap pernyataan tentang operasi hitung berikut!
+              Suhu di puncak gunung adalah <InlineMath math="-4°C" />. Suhu di kaki gunung <InlineMath math="23°C" /> lebih tinggi dari suhu di puncak. Suhu di kaki gunung adalah ....
             </p>
-            <TFTable qn={6} rows={[
-              { key:"a", text: <span><InlineMath math="(-4) \times 3 + (-2) = -14" /></span>,     correct: "Benar" },
-              { key:"b", text: <span><InlineMath math="20 \div (-4) - 5 = 0" /></span>,            correct: "Salah" },
-              { key:"c", text: <span><InlineMath math="(-3)^2 = -9" /></span>,                     correct: "Salah" },
+            <MCQ qn={6} correct={2} options={[
+              <span key="a">A. <InlineMath math="-27°C" /></span>,
+              <span key="b">B. <InlineMath math="-19°C" /></span>,
+              <span key="c">C. <InlineMath math="19°C" /></span>,
+              <span key="d">D. <InlineMath math="27°C" /></span>,
             ]} />
             <PembahasanBtn n={6} />
             {expandedPembahasan.has(6) && (
               <div className="mt-3 space-y-2">
-                <PBJawaban>(a) Benar &nbsp;|&nbsp; (b) Salah &nbsp;|&nbsp; (c) Salah</PBJawaban>
+                <PBJawaban>C. 19°C</PBJawaban>
                 <PBKonsep>
-                  <p>Urutan Ka–Pa–Ka–Ta: kali/bagi dikerjakan sebelum tambah/kurang.</p>
-                  <p><InlineMath math="(-3)^2 = (-3)\times(-3) = +9" /> bukan −9 — pangkat genap selalu positif!</p>
-                  <p className={`text-[10px] italic ${isDark?"text-violet-300/70":"text-violet-500"}`}>💡 Trik: pangkat genap bilangan negatif = positif, pangkat ganjil = negatif.</p>
+                  <p>“Lebih tinggi” dalam konteks suhu berarti ditambah (+), sedangkan “lebih rendah” berarti dikurangi (−).</p>
+                  <p className={`text-[10px] italic ${isDark?"text-violet-300/70":"text-violet-500"}`}>💡 Trik: ubah kata soal menjadi operasi matematika terlebih dahulu.</p>
                 </PBKonsep>
                 <PBSteps>
-                  <S n={1}><p>(a) <InlineMath math="(-4)\times3=-12" />, lalu <InlineMath math="-12+(-2)=-14" /> → <span className={`font-bold ${isDark?"text-green-300":"text-green-700"}`}>BENAR ✓</span></p></S>
-                  <S n={2}><p>(b) <InlineMath math="20\div(-4)=-5" />, lalu <InlineMath math="-5-5=-10\neq0" /> → <span className={`font-bold ${isDark?"text-red-300":"text-red-600"}`}>SALAH ✗</span></p></S>
-                  <S n={3}><p>(c) <InlineMath math="(-3)^2=(-3)\times(-3)=+9\neq-9" /> → <span className={`font-bold ${isDark?"text-red-300":"text-red-600"}`}>SALAH ✗</span></p></S>
+                  <S n={1}><p>Suhu puncak = <InlineMath math="-4°C" />.</p></S>
+                  <S n={2}><p>Suhu kaki gunung <InlineMath math="23°C" /> lebih tinggi: <InlineMath math="-4+23" />.</p></S>
+                  <S n={3}><div><BlockMath math="-4+23=19°C" /></div></S>
                 </PBSteps>
               </div>
             )}
