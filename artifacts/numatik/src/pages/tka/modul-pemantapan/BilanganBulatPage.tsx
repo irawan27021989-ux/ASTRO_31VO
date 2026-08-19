@@ -202,7 +202,9 @@ const BilanganBulatPage = () => {
 
   // ── question wrapper ─────────────────────────────────────────────────
   const Soal = ({ n, tipe, children }: { n: number; tipe: "PGS" | "MCMA" | "BS"; children: React.ReactNode }) => {
-    const displayNumber = n;
+    const deletedNumbers = [2, 3, 4, 8, 9, 13, 14, 15, 19, 24, 33, 34];
+  if (deletedNumbers.includes(n)) return null;
+  const displayNumber = n - deletedNumbers.filter((deletedNumber) => deletedNumber < n).length;
     const tipeColor =
       tipe === "PGS"  ? (isDark ? "bg-sky-500/20 text-sky-300 border-sky-500/40"       : "bg-sky-100 text-sky-700 border-sky-300") :
       tipe === "MCMA" ? (isDark ? "bg-amber-500/20 text-amber-300 border-amber-500/40"  : "bg-amber-100 text-amber-700 border-amber-300") :
@@ -1070,33 +1072,6 @@ const BilanganBulatPage = () => {
             <TelaahSoal num={13} tipe="MCMA">
               <p className={qText}>Harga Pertamax Rp13.850 per liter. Pak Anton membeli <InlineMath math="18{,}2" /> liter. Estimasi yang tepat adalah ....</p>
               <MCMA qn={63} items={[
-                { text: "Total biaya kurang dari Rp270.000,00", benar: true }, { text: "Total biaya lebih dari Rp230.000,00", benar: true },
-                { text: <span>Estimasi dapat dihitung dengan <InlineMath math="18\times Rp14.000" /></span>, benar: true }, { text: "Nilainya mendekati Rp300.000,00", benar: false },
-              ]} />
-            </TelaahSoal>
-            <TelaahSoal num={9} tipe="MCMA">
-              <p className={qText}>Diberikan <InlineMath math="14^2-4^2" />, <InlineMath math="10^2+44" />, dan <InlineMath math="12\times9" />. Faktor persekutuan ketiganya adalah ....</p>
-              <MCMA qn={59} items={[
-                { text: <InlineMath math="2\times3" />, benar: true }, { text: <InlineMath math="2^2\times3" />, benar: true },
-                { text: <InlineMath math="3" />, benar: true }, { text: <InlineMath math="2^3" />, benar: false },
-              ]} />
-            </TelaahSoal>
-            <TelaahSoal num={10} tipe="PGS">
-              <p className={qText}>Andi membeli bola basket Rp150.000, 2 celana training Rp90.000 per buah, dan 2 kaos Rp75.000 per buah. Setiap pembelian 5 barang gratis 1 barang termurah. Total setelah promo adalah ....</p>
-              <MCQ qn={60} correct={1} options={["A. Rp405.000", "B. Rp425.000", "C. Rp480.000", "D. Rp505.000"]} />
-            </TelaahSoal>
-            <TelaahSoal num={11} tipe="MCMA">
-              <p className={qText}>Pada layanan Samsat, Eko sudah selesai cek fisik pada menit ke-5. Rina dan Gilang mengantre setelahnya. Pernyataan yang pasti benar adalah ....</p>
-              <MCMA qn={61} items={[
-                { text: "Eko selesai pembayaran sebelum Rina memulai cek fisik.", benar: true },
-                { text: "Rina memulai pembayaran sebelum Gilang memulai pendaftaran.", benar: true },
-                { text: "Gilang mencetak STNK setelah Eko mengambil plat.", benar: true },
-                { text: "Total waktu kurang dari 60 menit.", benar: false },
-              ]} />
-            </TelaahSoal>
-            <TelaahSoal num={12} tipe="MCMA">
-              <p className={qText}>Harga Pertamax Rp13.850 per liter. Pak Anton membeli <InlineMath math="18{,}2" /> liter. Estimasi yang tepat adalah ....</p>
-              <MCMA qn={62} items={[
                 { text: "Total biaya kurang dari Rp270.000,00", benar: true }, { text: "Total biaya lebih dari Rp230.000,00", benar: true },
                 { text: <span>Estimasi dapat dihitung dengan <InlineMath math="18\times Rp14.000" /></span>, benar: true }, { text: "Nilainya mendekati Rp300.000,00", benar: false },
               ]} />
