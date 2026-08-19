@@ -415,7 +415,7 @@ const latihanDasar: Soal[] = [
   },
 ];
 
-const latihanOlimpiade: Soal[] = [
+export const latihanOlimpiade: Soal[] = [
   {
     no: 1,
     soal: "OSN Matematika 2003 Tingkat Kota\nPada sebuah peta dengan skala 1 : 100.000, luas tanah sebuah sekolah adalah 50 $cm^2$. Luas tanah sekolah tersebut pada peta dengan skala 1 : 200.000 adalah ...",

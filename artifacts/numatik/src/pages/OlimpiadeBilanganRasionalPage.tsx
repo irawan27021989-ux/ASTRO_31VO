@@ -552,7 +552,7 @@ const latihanDasar: LatihanSoal[] = [
   },
 ];
 
-const latihanOlimpiade: LatihanSoal[] = [
+export const latihanOlimpiade: LatihanSoal[] = [
   {
     no: 1,
     soal: "OSN Matematika 2003 Tingkat Kota\nHasil operasi terbesar yang dapat diperoleh dari penempatan angka-angka 4, 6, 7 dan 8 pada kotak yang tersusun seperti di bawah ini adalah ...",

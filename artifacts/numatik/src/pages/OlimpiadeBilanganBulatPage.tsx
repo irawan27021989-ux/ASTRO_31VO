@@ -743,7 +743,7 @@ const latihanDasar: LatihanSoal[] = [
   },
 ];
 
-const latihanOlimpiade: LatihanOlimpiadeSoal[] = [
+export const latihanOlimpiade: LatihanOlimpiadeSoal[] = [
   { no: 1, soal: "OSN Matematika 2003 Tingkat Kota\nJoko tidur malam dari pukul 9.20 dan bangun pagi pukul 4.35, ia tidur selama ...", options: ["A. 4 jam 45 menit", "B. 5 jam 15 menit", "C. 5 jam 45 menit", "D. 7 jam 15 menit", "E. 19 jam 15 menit"],
     jawaban: "D. 7 jam 15 menit",
     pembahasan: { konsep: "Menghitung durasi waktu yang melewati tengah malam dengan menjumlahkan dua selang waktu.", langkah: ["Dari pukul 9.20 malam ke pukul 12.00 tengah malam = 2 jam 40 menit", "Dari pukul 12.00 tengah malam ke pukul 4.35 pagi = 4 jam 35 menit", "Total waktu tidur = 2 jam 40 menit + 4 jam 35 menit = 7 jam 15 menit"], rumus: "Durasi = (24:00 - jam mulai) + jam bangun" } },
