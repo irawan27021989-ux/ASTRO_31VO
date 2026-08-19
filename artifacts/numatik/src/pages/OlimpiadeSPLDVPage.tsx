@@ -115,7 +115,7 @@ const latihanDasar = [
   { no: 17, soal: "Jumlah dua buah kebalikan bilangan adalah 5, sedangkan selisihnya adalah 1. (Kebalikan bilangan x adalah $\\frac{1}{x}$). Tentukan hasil kali kedua bilangan tersebut.", options: ["A. 6", "B. $\\frac{1}{6}$", "C. 5", "D. $\\frac{1}{5}$"] },
 ];
 
-const latihanOlimpiade = [
+export const latihanOlimpiade = [
   { no: 1, soal: "OSN Matematika 2005 Tingkat Kota\nTiga ekor ayam (besar, sedang dan kecil) ditimbang. Jika yang besar dan kecil ditimbang, beratnya adalah 2,6 kg. Jika yang besar dan sedang ditimbang, beratnya 3 kg dan jika yang sedang dan kecil ditimbang, beratnya 2 kg. Berat ketiga ayam tersebut seluruhnya adalah", options: ["A. 4 kg", "B. 4,2 kg", "C. 3,8 kg", "D. 4,6 kg"] },
   { no: 2, soal: "OSN Matematika 2006 Tingkat Kota\nSeorang ayah berumur 39 tahun mempunyai 2 anak bernama Budi dan Wati. Tahun depan selisih umur ayah dan Budi banding selisih umur ayah dan Wati adalah 14:19. Jika umur ayah sekarang adalah 3 kali umur Budi ditambah enam kali umur Wati, maka jumlah umur Budi dan Wati 3 tahun yang akan datang adalah ...", options: ["A. 17", "B. 18", "C. 19", "D. 20", "E. 21"] },
   { no: 3, soal: "OSN Matematika 2006 Tingkat Kota\nAli, Ani dan Budi pergi ke suatu toko untuk membeli pensil dan buku yang sama. Ali membeli dua buku dan dua pensil, Ani membeli tiga pensil dan 4 buku, sedangkan Budi membeli satu pensil dan dua buku. Jika Ali dan Ani berturut-turut membayar Rp. 2500,00 dan Rp. 4500,00 maka Budi harus membayar?", options: ["A. Rp1000,00", "B. Rp1500,00", "C. Rp2000,00", "D. Rp2500,00", "E. Rp3000,00"] },
