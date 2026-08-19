@@ -594,6 +594,12 @@ const latihanDasarTkaLama: LatihanSoal[] = [
   },
 ];
 
+export const bankSoalTeoremaPythagoras = latihanDasarOlimpiade.map((soal) => ({
+  ...soal,
+  pembahasan: teoremaPythagorasDasarPembahasan[soal.no],
+  gambar: latihanDasarGambarMap[soal.no],
+}));
+
 const TeoremaPage = () => (
   <TKAPemantapanLayout
     title="TEOREMA PYTHAGORAS"
